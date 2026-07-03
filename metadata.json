@@ -1,0 +1,6 @@
+{
+  "name": "VTNN 181",
+  "description": "Giải pháp nông nghiệp thông minh toàn diện - Chẩn đoán bệnh, kiểm tra đất, nhật ký vườn.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

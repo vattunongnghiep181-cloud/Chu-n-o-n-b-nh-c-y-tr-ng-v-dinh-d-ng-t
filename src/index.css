@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand-surface: #fbfaf7;
+  --brand-surface-dim: #f3f1eb;
+  --brand-surface-bright: #ffffff;
+  --brand-lowest: #ffffff;
+  --brand-low: #f7f6f1;
+  --brand-container: rgba(27, 67, 50, 0.03);
+  --brand-high: rgba(27, 67, 50, 0.06);
+  --brand-highest: rgba(27, 67, 50, 0.12);
+  
+  --brand-primary: #1b4332;
+  --brand-primary-light: #2d6a4f;
+  --brand-secondary: #40916c;
+  --brand-tertiary: #d95d14;
+  --brand-text: #1a221e;
+  --brand-text-variant: #616b64;
+
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(27, 67, 50, 0.08);
+}
+
+.dark {
+  --brand-surface: #0a0e0c;
+  --brand-surface-dim: #111815;
+  --brand-surface-bright: #17211c;
+  --brand-lowest: #060908;
+  --brand-low: #0f1512;
+  --brand-container: rgba(255, 255, 255, 0.03);
+  --brand-high: rgba(255, 255, 255, 0.07);
+  --brand-highest: rgba(255, 255, 255, 0.14);
+  
+  --brand-primary: #52b788;
+  --brand-primary-light: #74c69d;
+  --brand-secondary: #95d5b2;
+  --brand-tertiary: #f97316;
+  --brand-text: #f1f5f3;
+  --brand-text-variant: #9aa8a0;
+
+  --glass-bg: rgba(23, 33, 28, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-surface-dim: var(--brand-surface-dim);
+  --color-brand-surface-bright: var(--brand-surface-bright);
+  --color-brand-lowest: var(--brand-lowest);
+  --color-brand-low: var(--brand-low);
+  --color-brand-container: var(--brand-container);
+  --color-brand-high: var(--brand-high);
+  --color-brand-highest: var(--brand-highest);
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-light: var(--brand-primary-light);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-tertiary: var(--brand-tertiary);
+  --color-brand-text: var(--brand-text);
+  --color-brand-text-variant: var(--brand-text-variant);
+}
+
+body {
+  background-color: var(--color-brand-surface);
+  color: var(--color-brand-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism card utilities adapted for Light/Dark Mode */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-accent {
+  background: rgba(217, 93, 20, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 93, 20, 0.12);
+}
+
+.glass-primary {
+  background: rgba(27, 67, 50, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(27, 67, 50, 0.1);
+}
+
+/* Custom scrollbar matching sophisticated luxury tone */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-high);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-highest);
+}
+
